@@ -1,27 +1,28 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:responsive_course/view/Widgets/custom_drawe.dart';
 import 'package:responsive_course/view/home_view_body.dart';
 
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    GlobalKey<ScaffoldState> ScaffoldKey = GlobalKey();
+    GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
     return Scaffold(
-        key: ScaffoldKey,
-        drawer:  CustomDrawer(),
+        key: scaffoldKey,
+        drawer: const CustomDrawer(),
         backgroundColor: const Color(0xffDBDBDB),
         appBar: AppBar(
           backgroundColor: Colors.black,
           leading: GestureDetector(
             onTap: () {
-              ScaffoldKey.currentState!.openDrawer();
+              scaffoldKey.currentState!.openDrawer();
             },
             child: const Icon(
               Icons.menu,
