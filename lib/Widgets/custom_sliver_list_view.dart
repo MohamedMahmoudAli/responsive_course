@@ -5,12 +5,12 @@ class CustomSliverlistView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverList.separated(
-        separatorBuilder: (context, index) => const SizedBox(
-              height: 10,
-            ),
+    return SliverList.builder(
         itemCount: 20,
-        itemBuilder: (context, index) => const CustomSliverListItem());
+        itemBuilder: (context, index) => const Padding(
+              padding: EdgeInsets.only(top: 16.0),
+              child: CustomSliverListItem(),
+            ));
   }
 }
 
