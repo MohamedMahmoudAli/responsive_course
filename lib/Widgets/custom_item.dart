@@ -8,13 +8,14 @@ class CustomItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.shade300,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: const Center(
-            child: Text("Hello"),
-          ),
-        );
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade400,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: const Center(
+        child: Text("Hello"),
+      ),
+    );
   }
 }
