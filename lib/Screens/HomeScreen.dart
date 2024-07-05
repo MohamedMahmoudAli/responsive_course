@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_course/Widgets/custom_drawe.dart';
-import 'package:responsive_course/Widgets/custom_sliver_grid.dart';
-import 'package:responsive_course/Widgets/home_view_body.dart';
+import 'package:responsive_course/view/Widgets/custom_drawe.dart';
+import 'package:responsive_course/view/home_view_body.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -16,7 +15,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     GlobalKey<ScaffoldState> ScaffoldKey = GlobalKey();
     return Scaffold(
         key: ScaffoldKey,
-        drawer: const CustomDrawer(),
+        drawer:  CustomDrawer(),
         backgroundColor: const Color(0xffDBDBDB),
         appBar: AppBar(
           backgroundColor: Colors.black,
