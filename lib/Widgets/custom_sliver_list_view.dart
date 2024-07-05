@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_course/Widgets/custom_sliver_list_item.dart';
 
 class CustomSliverlistView extends StatelessWidget {
   const CustomSliverlistView({super.key});
@@ -14,15 +15,3 @@ class CustomSliverlistView extends StatelessWidget {
   }
 }
 
-class CustomSliverListItem extends StatelessWidget {
-  const CustomSliverListItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 70,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15), color: Colors.grey),
-    );
-  }
-}
