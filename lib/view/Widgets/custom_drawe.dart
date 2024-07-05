@@ -16,6 +16,7 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: const Color(0xffDBDBDB),
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
@@ -23,7 +24,7 @@ class CustomDrawer extends StatelessWidget {
             const DrawerHeader(
               child: Icon(
                 FontAwesomeIcons.solidHeart,
-                size: 150,
+                size: 50,
               ),
             ),
             CustomDrawerBody(items: items)
@@ -33,4 +34,3 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 }
-

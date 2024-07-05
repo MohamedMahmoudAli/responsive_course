@@ -6,17 +6,19 @@ class CustomTabletList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          shrinkWrap: true,
-          itemCount: 10,
-          itemBuilder: (context, index) => const Padding(
-                padding: EdgeInsets.only(right: 8.0),
-                child: AspectRatio(
-                    aspectRatio: 1, child: CustomSliverListItem()),
-              )),
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: 100,
+        child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+            itemCount: 10,
+            itemBuilder: (context, index) => const Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: AspectRatio(
+                      aspectRatio: 1, child: CustomSliverListItem()),
+                )),
+      ),
     );
   }
 }
