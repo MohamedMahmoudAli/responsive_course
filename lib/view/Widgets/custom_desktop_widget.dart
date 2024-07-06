@@ -8,11 +8,13 @@ class CustomDesktopWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
+        SizedBox(height: 16),
         Expanded(flex: 2, child: CustomItem()),
+        SizedBox(height: 18),
         Expanded(
           flex: 1,
           child: CustomItem(
-            color: Color(0xffECECEC),
+            color: Colors.white,
           ),
         )
       ],

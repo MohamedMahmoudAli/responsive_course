@@ -6,7 +6,7 @@ class CustomSliverListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: 80,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: Colors.grey),
     );

@@ -11,11 +11,11 @@ class TabletLayout extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
-            height: 50,
+            height: 16,
           ),
         ),
-        CustomTabletList(),
-         CustomSliverlistView()
+        CustomTabletListItem(),
+        CustomSliverlistView()
       ],
     );
   }

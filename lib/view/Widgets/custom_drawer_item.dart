@@ -8,9 +8,12 @@ class CustomDrawerListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        item.title,
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+      title: Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Text(
+          item.title,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
       ),
       leading: Icon(item.icon),
     );

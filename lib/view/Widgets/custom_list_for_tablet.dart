@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_course/view/Widgets/custom_sliver_list_item.dart';
 
-class CustomTabletList extends StatelessWidget {
-  const CustomTabletList({super.key});
+class CustomTabletListItem extends StatelessWidget {
+  const CustomTabletListItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 100,
+        height: 150,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
