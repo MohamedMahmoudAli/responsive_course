@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: scaffoldKey,
         drawer: const CustomDrawer(),
         backgroundColor: const Color(0xffDBDBDB),
-        appBar: MediaQuery.of(context).size.width < 900
+        appBar: MediaQuery.of(context).size.width < (900 - 20)
             ? AppBar(
                 backgroundColor: Colors.black,
                 leading: GestureDetector(

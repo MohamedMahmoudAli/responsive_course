@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:responsive_course/view/Widgets/custom_list_for_tablet.dart';
@@ -15,15 +17,15 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: LayoutBuilder(builder: (context, Constraints) {
+        log(Constraints.maxWidth.toString());
+        log(MediaQuery.of(context).size.width.toString());
         if (Constraints.maxWidth < 600) {
           return const MobileLayout();
-        } else if(Constraints.maxWidth < 900) {
+        } else if (Constraints.maxWidth < 900) {
           return const TabletLayout();
-        }
-        else{
+        } else {
           return const DesktopLayout();
         }
-        
       }),
     );
   }
