@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_course/Screens/HomeScreen.dart';
@@ -49,8 +51,21 @@ class TextPreview extends StatelessWidget {
 }
 
 double getResponsiveFontSize(
+  BuildContext context, {
+  required double fontSize,
+}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+  return responsiveFontSize;
+}
 
-  {required double width }
-){
-  return width * .05;
+double getScaleFactor(BuildContext context) {
+  double width = MediaQuery.of(context).size.width;
+  if (width < 600) {
+    return width / 400;
+  } else if (width < 900) {
+    return width / 700;
+  } else {
+    return width / 1000;
+  }
 }
