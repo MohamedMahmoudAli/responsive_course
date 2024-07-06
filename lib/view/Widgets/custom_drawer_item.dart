@@ -10,9 +10,12 @@ class CustomDrawerListItem extends StatelessWidget {
     return ListTile(
       title: Padding(
         padding: const EdgeInsets.only(left: 16.0),
-        child: Text(
-          item.title,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        child: FittedBox(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            item.title.toUpperCase(),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
         ),
       ),
       leading: Icon(item.icon),

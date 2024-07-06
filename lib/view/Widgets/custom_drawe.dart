@@ -6,10 +6,10 @@ import 'package:responsive_course/view/Widgets/custom_drawer_body.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   static List<DrawerModelListItem> items = [
-    DrawerModelListItem(title: "Dashboard", icon: Icons.home),
-    DrawerModelListItem(title: "Setting", icon: Icons.settings),
-    DrawerModelListItem(title: "About", icon: Icons.info),
-    DrawerModelListItem(title: "Logout", icon: Icons.logout),
+    DrawerModelListItem(title: "D a s h b o a r d", icon: Icons.home),
+    DrawerModelListItem(title: "S e t t i n g", icon: Icons.settings),
+    DrawerModelListItem(title: "A b o u t", icon: Icons.info),
+    DrawerModelListItem(title: "L o g o u t", icon: Icons.logout),
   ];
 
   @override
