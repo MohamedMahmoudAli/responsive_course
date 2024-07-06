@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:responsive_course/view/Widgets/adabtive_layout_builder.dart';
 import 'package:responsive_course/view/Widgets/custom_list_for_tablet.dart';
 import 'package:responsive_course/view/Widgets/custom_sliver_grid.dart';
 import 'package:responsive_course/view/Widgets/custom_sliver_list_view.dart';
@@ -14,19 +15,12 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: LayoutBuilder(builder: (context, Constraints) {
-        log(Constraints.maxWidth.toString());
-        log(MediaQuery.of(context).size.width.toString());
-        if (Constraints.maxWidth < 600) {
-          return const MobileLayout();
-        } else if (Constraints.maxWidth < 900) {
-          return const TabletLayout();
-        } else {
-          return const DesktopLayout();
-        }
-      }),
-    );
+    return const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: AdabtiveLayoutBuilder(
+          mobileLayout: MobileLayout(),
+          tabletLayout: TabletLayout(),
+          desktopLayout: DesktopLayout(),
+        ));
   }
 }
