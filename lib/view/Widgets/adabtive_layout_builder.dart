@@ -8,19 +8,17 @@ class AdabtiveLayoutBuilder extends StatelessWidget {
       required this.mobileLayout,
       required this.tabletLayout,
       required this.desktopLayout});
-  final Widget mobileLayout, tabletLayout, desktopLayout;
+  final WidgetBuilder mobileLayout, tabletLayout, desktopLayout;
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, Constraints) {
-      log(Constraints.maxWidth.toString());
-      log(MediaQuery.of(context).size.width.toString());
-      if (Constraints.maxWidth < 600) {
-        return mobileLayout;
-      } else if (Constraints.maxWidth < 900) {
-        return tabletLayout;
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth < 600) {
+        return mobileLayout(context);
+      } else if (constraints.maxWidth < 900) {
+        return tabletLayout(context);
       } else {
-        return desktopLayout;
+        return desktopLayout(context);
       }
     });
   }
