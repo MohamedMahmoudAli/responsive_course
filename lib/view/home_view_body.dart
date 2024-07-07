@@ -1,11 +1,6 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:responsive_course/view/Widgets/adabtive_layout_builder.dart';
-import 'package:responsive_course/view/Widgets/custom_list_for_tablet.dart';
-import 'package:responsive_course/view/Widgets/custom_sliver_grid.dart';
-import 'package:responsive_course/view/Widgets/custom_sliver_list_view.dart';
 import 'package:responsive_course/view/Widgets/desktop_layout.dart';
 import 'package:responsive_course/view/Widgets/mobile_layout.dart';
 import 'package:responsive_course/view/Widgets/tablet_layout.dart';

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_course/view/Widgets/custom_desktop_widget.dart';
 import 'package:responsive_course/view/Widgets/custom_drawe.dart';
-import 'package:responsive_course/view/Widgets/custom_list_for_tablet.dart';
-import 'package:responsive_course/view/Widgets/custom_sliver_list_view.dart';
 import 'package:responsive_course/view/Widgets/tablet_layout.dart';
 
 class DesktopLayout extends StatelessWidget {
